@@ -1,0 +1,91 @@
+import type { DashboardRole, NavItem } from "../types/dashboard.types";
+
+export const dashboardBasePaths: Record<DashboardRole, string> = {
+  CUSTOMER: "/dashboard/customer",
+  TECHNICIAN: "/dashboard/user",
+  TECHNICIAN_SUPERVISOR: "/dashboard/supervisor",
+  CUSTOMER_SUPPORT: "/dashboard/support",
+  OPERATIONS_MANAGER: "/dashboard/operations",
+  ADMIN: "/dashboard/admin",
+  SUPER_ADMIN: "/dashboard/super-admin",
+};
+
+export const dashboardTitles: Record<DashboardRole, string> = {
+  CUSTOMER: "Customer workspace",
+  TECHNICIAN: "Technician workspace",
+  TECHNICIAN_SUPERVISOR: "Supervisor workspace",
+  CUSTOMER_SUPPORT: "Customer support",
+  OPERATIONS_MANAGER: "Operations workspace",
+  ADMIN: "Admin control centre",
+  SUPER_ADMIN: "Platform control centre",
+};
+
+export const dashboardNavigation: Record<DashboardRole, NavItem[]> = {
+  CUSTOMER: [
+    { label: "Overview", path: "", icon: "LayoutDashboard" },
+    { label: "Book a service", path: "/book-service", icon: "PlusCircle" },
+    { label: "My bookings", path: "/bookings", icon: "CalendarDays" },
+    { label: "Addresses", path: "/addresses", icon: "MapPin" },
+    { label: "Payments & invoices", path: "/payments", icon: "CreditCard" },
+    { label: "Reviews", path: "/reviews", icon: "Star" },
+    { label: "Support", path: "/support", icon: "Headset" },
+  ],
+  TECHNICIAN: [
+    { label: "Overview", path: "", icon: "LayoutDashboard" },
+    { label: "My jobs", path: "/jobs", icon: "BriefcaseBusiness" },
+    { label: "Job requests", path: "/job-requests", icon: "Inbox" },
+    { label: "My schedule", path: "/schedule", icon: "CalendarDays" },
+    { label: "Availability", path: "/availability", icon: "Clock" },
+    { label: "Quotations", path: "/quotations", icon: "FileText" },
+    { label: "Earnings", path: "/earnings", icon: "Wallet" },
+    { label: "Performance", path: "/performance", icon: "ChartNoAxesCombined" },
+  ],
+  TECHNICIAN_SUPERVISOR: [
+    { label: "Overview", path: "", icon: "LayoutDashboard" },
+    { label: "Technician team", path: "/team", icon: "Users" },
+    { label: "Job allocation", path: "/allocations", icon: "ClipboardList" },
+    { label: "Live monitoring", path: "/monitoring", icon: "Map" },
+    { label: "Attendance", path: "/attendance", icon: "CalendarCheck" },
+    { label: "Performance", path: "/performance", icon: "ChartNoAxesCombined" },
+    { label: "Escalations", path: "/escalations", icon: "AlertTriangle" },
+  ],
+  CUSTOMER_SUPPORT: [
+    { label: "Overview", path: "", icon: "LayoutDashboard" },
+    { label: "Support tickets", path: "/tickets", icon: "MessagesSquare" },
+    { label: "Customers", path: "/customers", icon: "Users" },
+    { label: "Booking issues", path: "/booking-issues", icon: "CalendarX" },
+    { label: "Complaints", path: "/complaints", icon: "Flag" },
+    { label: "Refund requests", path: "/refunds", icon: "Receipt" },
+    { label: "Escalations", path: "/escalations", icon: "AlertTriangle" },
+  ],
+  OPERATIONS_MANAGER: [
+    { label: "Overview", path: "", icon: "LayoutDashboard" },
+    { label: "Bookings", path: "/bookings", icon: "CalendarDays" },
+    { label: "Service catalogue", path: "/services", icon: "Wrench" },
+    { label: "Technician operations", path: "/technicians", icon: "Users" },
+    { label: "Service areas", path: "/service-areas", icon: "MapPin" },
+    { label: "Inventory", path: "/inventory", icon: "Boxes" },
+    { label: "Reports", path: "/reports", icon: "ChartNoAxesCombined" },
+  ],
+  ADMIN: [
+    { label: "Overview", path: "", icon: "LayoutDashboard" },
+    { label: "User management", path: "/users", icon: "Users" },
+    { label: "Customers", path: "/customers", icon: "UserRound" },
+    { label: "Technicians", path: "/technicians", icon: "UserCog" },
+    { label: "Bookings", path: "/bookings", icon: "CalendarDays" },
+    { label: "Services & categories", path: "/services", icon: "Layers" },
+    { label: "Payments & refunds", path: "/payments", icon: "CreditCard" },
+    { label: "Complaints", path: "/complaints", icon: "MessageSquareWarning" },
+    { label: "Reports", path: "/reports", icon: "ChartNoAxesCombined" },
+  ],
+  SUPER_ADMIN: [
+    { label: "Overview", path: "", icon: "LayoutDashboard" },
+    { label: "Admin management", path: "/admins", icon: "ShieldCheck" },
+    { label: "Roles & permissions", path: "/permissions", icon: "KeyRound" },
+    { label: "Global users", path: "/users", icon: "Users" },
+    { label: "Platform analytics", path: "/analytics", icon: "ChartNoAxesCombined" },
+    { label: "Audit logs", path: "/audit-logs", icon: "ScrollText" },
+    { label: "Security", path: "/security", icon: "Shield" },
+    { label: "Settings", path: "/settings", icon: "Settings" },
+  ],
+};
