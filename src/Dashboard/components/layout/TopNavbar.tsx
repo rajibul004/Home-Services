@@ -14,7 +14,9 @@ import { useNavigate } from "react-router-dom";
 import { logoutUser } from "../../../api/authApi";
 
 type WorkStatus = "AVAILABLE" | "OFF_DUTY";
-
+interface TechnicianProfile {
+  workStatus: WorkStatus;
+}
 const workStatusOptions: {
   value: WorkStatus;
   label: string;
