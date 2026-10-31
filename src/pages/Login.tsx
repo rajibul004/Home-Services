@@ -9,7 +9,6 @@ const LINE = "#E2EAE8";
 const ACCENT = "#0D9488";
 const ACCENT_DARK = "#0F766E";
 const PAPER = "#F8FAF9";
-const WHITE = "#FFFFFF";
 
 function EyeIcon() {
   return (
@@ -101,14 +100,6 @@ function CheckCircleIcon() {
     >
       <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
       <path d="M22 4L12 14.01l-3-3" />
-    </svg>
-  );
-}
-
-function StarIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9L12 3.5Z" />
     </svg>
   );
 }
